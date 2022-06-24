@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/jquery-3.6.0.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <form action="{{ url_for('add_manga') }}" methods="POST">
+            <input type="text" name="nome" id="nome" required>
+            <input type="number" name="caps" id="caps">
+            <input type="number" name="volumes" id="volumes">
+            <input type="text" name="autor" id="autor">
+            <input type="number" name="ano" id="ano" required>
+            <button id="btn-submit" onclick="addManga()">Ok</button>
+        </form>
+    </main>
+
+    <ul class="lista_manga">
+
+    </ul>
+
+    <script src="../static/js/script.js"></script>
+
+</body>
+</html>
